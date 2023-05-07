@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --oasen-blue: #26b4f4;
+    --oasen-blue-dark: #109ede;
+  }
+
+  @font-face {
+    font-family: "strada";
+    src: font-url("./fonts/strada.ttf");
+    format: ("truetype");
+  }
+
+  @font-face {
+    font-family: "strada-light";
+    src: url("./fonts/strada-light.ttf");
+    format: ("truetype");
+  }
+}
+
+@layer components {
+  .oasenh1 {
+    @apply font-strada text-blue-oasen text-6xl font-bold;
+  }
+  .oasenwhite {
+    @apply font-strada text-white text-6xl font-bold;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: strada-light;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
